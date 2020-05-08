@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- <table>
+        <tr>
+                <th style="color: white;">Movie Name        </th>
+                <th  style="color: white;">Rating       </th>
+        </tr>
+        <tr>
+        <tr>
+        <td style="color: white;">Bob            </td>
+        <td style="color: white;">Yellow      </td>
+        </tr>
+</table> -->
+
+<h1 style="color: red;"> LANGUAGE :{{  tops[0]   }}</h1>
+<h1 style="color: rgb(17, 0, 255);"> CATEGIORY :{{  tops[1]   }}</h1>
+
+<!-- <table>
+{% for t in tops %}
+        <tr>
+                <th style="color: white;"><h2>LANGUAGE{{ x }}</h2></th>
+        </tr>
+{% endfor %}
+</table> -->
+<table>
+        <tr>
+                <th style="color: red;"><h1>MOVIE NAME</h1></th>
+                <th  style="color: rgb(17, 0, 255);"><h1>RATING  </h1> </th>
+                <th style="color: red;"><h1>YEAR  </h1></th>
+                <th  style="color: rgb(17, 0, 255);"><h1>LENGTH  </h1></th>
+                <th  style="color: red;"><h1>DIRECTOR AND STARS</h1></th>
+                <th style="color: rgb(17, 0, 255);"><h1>ABOUT MOVIES</h1></th>
+        </tr>
+{% for d in data %}
+        <tr>
+        {% for x in d %}
+                <th style="color: white;"><h2>{{   x   }}</h2></th>
+        {% endfor %}
+        </tr>
+{% endfor %}
+</table>
